@@ -23,6 +23,7 @@ class MainFragment : Fragment(), View.OnClickListener {
         val view = binding.root
         binding.btnTicTacToe.setOnClickListener(this)
         binding.btn8puzzle.setOnClickListener(this)
+        binding.btnSudoku.setOnClickListener(this)
         (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
         (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.app_name)
         ft = activity!!.supportFragmentManager.beginTransaction()
@@ -39,6 +40,11 @@ class MainFragment : Fragment(), View.OnClickListener {
             }
             R.id.btn_8puzzle -> {
                 ft.replace(R.id.frame_container, EightPuzzleFragment())
+                    .addToBackStack(null)
+                    .commit()
+            }
+            R.id.btn_sudoku -> {
+                ft.replace(R.id.frame_container, SudokuFragment())
                     .addToBackStack(null)
                     .commit()
             }
