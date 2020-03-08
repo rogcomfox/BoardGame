@@ -11,8 +11,6 @@ class MainActivity : AppCompatActivity(), FragmentManager.OnBackStackChangedList
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
         //set frame layout for fragment
         val frameLayout = FrameLayout(this)
         frameLayout.id = R.id.frame_container
