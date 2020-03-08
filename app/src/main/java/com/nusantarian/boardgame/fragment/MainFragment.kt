@@ -1,20 +1,64 @@
 package com.nusantarian.boardgame.fragment
 
 import android.os.Bundle
+import android.view.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-
+import androidx.fragment.app.FragmentTransaction
 import com.nusantarian.boardgame.R
+import com.nusantarian.boardgame.databinding.FragmentMainBinding
 
-class MainFragment : Fragment() {
+class MainFragment : Fragment(), View.OnClickListener {
+
+    private var _binding: FragmentMainBinding? = null
+    private val binding get() = _binding!!
+    private lateinit var ft:FragmentTransaction
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        _binding = FragmentMainBinding.inflate(inflater, container, false)
+        val view = binding.root
+        binding.btnTicTacToe.setOnClickListener(this)
+        binding.btn8puzzle.setOnClickListener(this)
+        (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
+        (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.app_name)
+        ft = activity!!.supportFragmentManager.beginTransaction()
+        setHasOptionsMenu(true)
+        return view
+    }
+
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.btn_tic_tac_toe -> {
+                ft.replace(R.id.frame_container, TicTacToeFragment())
+                    .addToBackStack(null)
+                    .commit()
+            }
+            R.id.btn_8puzzle -> {
+                ft.replace(R.id.frame_container, EightPuzzleFragment())
+                    .addToBackStack(null)
+                    .commit()
+            }
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.main_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.nav_about -> {
+
+            }
+            R.id.nav_settings -> {
+
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
