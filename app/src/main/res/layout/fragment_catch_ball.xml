@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="horizontal"
+    tools:context=".fragment.CatchBallFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        style="@style/Widget.Design.AppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/AppTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@android:color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar"
+        android:background="@android:color/white"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:paddingVertical="5dp"
+        android:text="@string/score_0"
+        android:textSize="18sp" />
+
+    <FrameLayout
+        android:id="@+id/frame_game"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/score"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/img_player"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="bottom"
+            android:contentDescription="@string/player"
+            android:src="@drawable/player" />
+
+        <ImageView
+            android:id="@+id/img_spark"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/spark"
+            android:src="@drawable/spark" />
+
+        <ImageView
+            android:id="@+id/green"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/green"
+            android:src="@drawable/green" />
+
+        <ImageView
+            android:id="@+id/blue"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/blue"
+            android:src="@drawable/blue" />
+
+        <LinearLayout
+            android:id="@+id/startLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/catch_the_ball"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_highScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto"
+                android:text="@string/high_score" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/start"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>
