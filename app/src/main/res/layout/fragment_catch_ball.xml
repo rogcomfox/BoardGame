@@ -57,21 +57,24 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:contentDescription="@string/spark"
-            android:src="@drawable/spark" />
+            android:src="@drawable/spark"
+            android:visibility="invisible" />
 
         <ImageView
             android:id="@+id/green"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:contentDescription="@string/green"
-            android:src="@drawable/green" />
+            android:src="@drawable/green"
+            android:visibility="invisible" />
 
         <ImageView
             android:id="@+id/blue"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:contentDescription="@string/blue"
-            android:src="@drawable/blue" />
+            android:src="@drawable/blue"
+            android:visibility="invisible" />
 
         <LinearLayout
             android:id="@+id/startLayout"
@@ -92,8 +95,8 @@
                 android:id="@+id/tv_highScore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/roboto"
                 android:text="@string/high_score" />
 
