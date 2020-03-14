@@ -22,4 +22,12 @@
     <string name="nine">9</string>
     <string name="notes">Notes</string>
     <string name="delete">Delete</string>
+    <string name="catch_the_ball">Catch The Ball</string>
+    <string name="score_0">Score: 0</string>
+    <string name="player">Player</string>
+    <string name="spark">Spark</string>
+    <string name="green">Green</string>
+    <string name="blue">BLue</string>
+    <string name="high_score">High Score</string>
+    <string name="start">Start</string>
 </resources>
