@@ -25,6 +25,7 @@ class MainFragment : Fragment(), View.OnClickListener {
         binding.btn8puzzle.setOnClickListener(this)
         binding.btnSudoku.setOnClickListener(this)
         binding.btnCatchBall.setOnClickListener(this)
+        binding.btnSnake.setOnClickListener(this)
         (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
         (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.app_name)
         ft = activity!!.supportFragmentManager.beginTransaction()
@@ -34,6 +35,11 @@ class MainFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v?.id) {
+            R.id.btn_snake -> {
+                ft.replace(R.id.frame_container, SnakeGameFragment())
+                    .addToBackStack(null)
+                    .commit()
+            }
             R.id.btn_tic_tac_toe -> {
                 ft.replace(R.id.frame_container, TicTacToeFragment())
                     .addToBackStack(null)
