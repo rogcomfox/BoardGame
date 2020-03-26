@@ -30,4 +30,10 @@
     <string name="blue">BLue</string>
     <string name="high_score">High Score</string>
     <string name="start">Start</string>
+    <string name="snake_game">Snake Game</string>
+    <string name="current_score">Current Score：</string>
+    <string name="restart">Restart</string>
+    <string name="back">Back</string>
+    <string name="pause">Pause</string>
+    <string name="_2048_puzzle">2048 Puzzle</string>
 </resources>
