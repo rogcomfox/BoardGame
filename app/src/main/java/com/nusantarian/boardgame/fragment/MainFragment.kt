@@ -1,11 +1,13 @@
 package com.nusantarian.boardgame.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.nusantarian.boardgame.R
+import com.nusantarian.boardgame.activity.Game2048Activity
 import com.nusantarian.boardgame.databinding.FragmentMainBinding
 
 class MainFragment : Fragment(), View.OnClickListener {
@@ -26,6 +28,7 @@ class MainFragment : Fragment(), View.OnClickListener {
         binding.btnSudoku.setOnClickListener(this)
         binding.btnCatchBall.setOnClickListener(this)
         binding.btnSnake.setOnClickListener(this)
+        binding.btnGame2048.setOnClickListener(this)
         (activity as AppCompatActivity).setSupportActionBar(binding.toolbar)
         (activity as AppCompatActivity).supportActionBar?.setTitle(R.string.app_name)
         ft = activity!!.supportFragmentManager.beginTransaction()
@@ -60,6 +63,7 @@ class MainFragment : Fragment(), View.OnClickListener {
                     .addToBackStack(null)
                     .commit()
             }
+            R.id.btn_game2048 -> startActivity(Intent(this.activity, Game2048Activity::class.java))
         }
     }
 

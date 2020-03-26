@@ -21,6 +21,20 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_game2048"
+        android:layout_above="@id/btn_catchBall"
+        android:layout_marginStart="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/_2048_puzzle"
+        android:textAllCaps="false"
+        android:textAppearance="?attr/textAppearanceButton"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_catchBall"
         android:layout_above="@id/btn_tic_tac_toe"
         android:layout_marginStart="70dp"
