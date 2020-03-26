@@ -1,4 +1,4 @@
-package com.nusantarian.boardgame.SnakeAsset
+package com.nusantarian.boardgame.snakeGame
 
 enum class Direction {
     LEFT,

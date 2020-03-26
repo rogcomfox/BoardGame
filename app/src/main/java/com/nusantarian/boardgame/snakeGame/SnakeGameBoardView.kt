@@ -1,4 +1,4 @@
-package com.nusantarian.boardgame.custom
+package com.nusantarian.boardgame.snakeGame
 
 import android.content.Context
 import android.graphics.Canvas
@@ -8,9 +8,6 @@ import android.os.Handler
 import android.util.AttributeSet
 import android.util.Log
 import android.view.View
-import com.nusantarian.boardgame.SnakeAsset.Direction
-import com.nusantarian.boardgame.SnakeAsset.Node
-import com.nusantarian.boardgame.game.Snake
 
 
 class SnakeGameBoardView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {

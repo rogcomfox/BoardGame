@@ -1,7 +1,5 @@
-package com.nusantarian.boardgame.game
+package com.nusantarian.boardgame.snakeGame
 
-import com.nusantarian.boardgame.SnakeAsset.Direction
-import com.nusantarian.boardgame.SnakeAsset.Node
 import java.util.*
 
 open class Snake {
