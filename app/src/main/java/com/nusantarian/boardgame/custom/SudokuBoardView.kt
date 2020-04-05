@@ -17,7 +17,7 @@ class SudokuBoardView(context: Context, attributeSet: AttributeSet) : View(conte
     private var cellSizePixel = 0f
     private var selectedRow = -1
     private var selectedCol = -1
-    private var listener: com.nusantarian.boardgame.custom.OnTouchListener? = null
+    private var listener: com.nusantarian.boardgame.model.OnTouchListener? = null
     private var cells: List<SudokuCell>? = null
 
     private val thickLine = Paint().apply {
@@ -208,7 +208,7 @@ class SudokuBoardView(context: Context, attributeSet: AttributeSet) : View(conte
         invalidate()
     }
 
-    fun registerListener(listener: com.nusantarian.boardgame.custom.OnTouchListener) {
+    fun registerListener(listener: com.nusantarian.boardgame.model.OnTouchListener) {
         this.listener = listener
     }
 }

@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             app:titleTextColor="@android:color/white" />
     </com.google.android.material.appbar.AppBarLayout>
-    <com.nusantarian.boardgame.custom.SnakeGameBoardView
+    <com.nusantarian.boardgame.snakeGame.SnakeGameBoardView
         android:id="@+id/canvas"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"/>

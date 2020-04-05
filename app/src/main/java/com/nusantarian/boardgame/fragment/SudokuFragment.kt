@@ -13,13 +13,14 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.button.MaterialButton
 import com.nusantarian.boardgame.R
-import com.nusantarian.boardgame.custom.OnTouchListener
+import com.nusantarian.boardgame.model.OnTouchListener
 import com.nusantarian.boardgame.databinding.FragmentSudokuBinding
 import com.nusantarian.boardgame.game.SudokuCell
 import com.nusantarian.boardgame.viewmodel.SudokuViewModel
 
 
-class SudokuFragment : Fragment(), OnTouchListener {
+class SudokuFragment : Fragment(),
+    OnTouchListener {
 
     private var _binding: FragmentSudokuBinding? = null
     private val binding get() = _binding!!
